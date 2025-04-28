@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "voxnode_backend": {
+      "main": "src/voxnode_backend/main.mo",
+      "type": "motoko"
+    },
+    "voxnode_frontend": {
+      "dependencies": [
+        "voxnode_backend"
+      ],
+      "source": [
+        "src/voxnode_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "voxnode_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
