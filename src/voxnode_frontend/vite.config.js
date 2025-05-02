@@ -30,6 +30,9 @@ export default defineConfig({
     environment("all", { prefix: "CANISTER_" }),
     environment("all", { prefix: "DFX_" }),
   ],
+  css: {
+    postcss: './postcss.config.js', // memastikan PostCSS terhubung
+  },
   resolve: {
     alias: [
       {
