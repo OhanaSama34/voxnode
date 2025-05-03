@@ -439,12 +439,12 @@ actor AnonymousOpinions {
   };
 
   // Query function to get an opinion by ID
-  public query func getOpinion(id: Nat) : async ?Opinion {
+  public query func getSearchOpinion(id: Nat) : async ?Opinion {
     opinions.get(id);
   };
   
   // Get replies to a specific opinion
-  public query func getReplies(opinionId: Nat) : async [Opinion] {
+  public query func getSearchReplies(opinionId: Nat) : async [Opinion] {
     Iter.toArray(
       Iter.filter(
         opinions.vals(),
